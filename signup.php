@@ -23,7 +23,6 @@
                     <input type="password" name="repeat_password" id="repeat_password" class="form-control" placeholder="Repeat your Password" required><br>
                     
                     <input type="submit" name="Submit" class="btn btn-success" value="Submit"><br>
-                    <small id="error">Error Message</small>
             </form>
 
         </div>
