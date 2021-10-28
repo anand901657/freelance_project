@@ -21,7 +21,6 @@
 
                     
                     <input type="submit" name="Submit" class="btn btn-success" value="Submit"><br>
-                    <small id="error">Error Message</small>
             </form>
 
         </div>

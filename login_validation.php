@@ -5,7 +5,7 @@ if(isset($_POST['Submit'])){
 	$password=trim($_POST["password"]);
     $error="";
 	if(!preg_match("/^[_\.0-9a-zA-Z-]+@([0-9a-zA-Z][0-9a-zA-Z-]+\.)+[a-zA-Z]{2,6}$/i", $emp_email)){
-	    $error= $error."<span style='color:red' class='error'>Please enter valide email, like your@abc.com</span><br>";
+	    $error= $error."<span style='color:red' class='error'>Please enter valid email, like your@abc.com</span><br>";
 	}
 	else{
         $con = new mysqli('localhost', 'root', '','social_db');
@@ -21,7 +21,7 @@ if(isset($_POST['Submit'])){
                 $_SESSION["email"] =$row['user_email'];
                 $_SESSION["user_id"] = $row['user_id'];
               }
-            header("Location: friendadd.php");
+            header("Location: friendlist.php");
         }
         else
         {
