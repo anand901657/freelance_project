@@ -1,5 +1,5 @@
 <?php
-include(dirname(__DIR__).'addfriend.php'); 
+include('addfriend.php'); 
 
 session_start();
 
@@ -16,16 +16,22 @@ if(isset($_SESSION['user_id'])===FALSE)
         table,td,th{
             border: 1px solid black;
             text-align:center;
+            padding:10px;
+        }
+        th{
+            background-color:lightblue;
+        }
+        td button{
+            background-color:green;
+            color:white;
+            padding:5 30 5 30;
+        }
+        a{
+            margin-left:50px;
         }
     </style>
     </head>
-    <body>
-        <!-- <?php echo "<h1>EMAIL : ".$_SESSION["email"]."</h1>"?>
-        <?php if(isset($_SESSION["f_name"])) echo "<h1>NAME: ".$_SESSION["f_name"]."</h1>"?>
-        <?php if(isset($_SESSION["user_id"])) echo "<h1>ID: ".$_SESSION["user_id"]."</h1>"?> -->
-        <?php
-        print_r($_SESSION);
-        ?>
+    <body  style="text-align:center;">
         
 
         <h1>MY Social Circle</h1>
@@ -39,7 +45,7 @@ if(isset($_SESSION['user_id'])===FALSE)
               }
             $con->close();
         ?>
-        <table >
+        <table style="margin-left:auto;margin-right:auto;">
             <tr>
                 <th>Friends</th>
                 <th>Click To add friend</th>
@@ -65,7 +71,8 @@ if(isset($_SESSION['user_id'])===FALSE)
             ?>
             
         </table>
-        <a href="friendlist.php">friendlist</a>
+        <br>
+        <a href="friendlist.php">View Friends</a>
         <a href="logout.php">Logout</a>
 
         <form action="" method="POST">

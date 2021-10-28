@@ -8,8 +8,6 @@
 
     include('viewfriend.php'); 
     
-    
-
 ?>
 
 <!-- SELECT * from my_friends,users WHERE my_friends.user_id!=3 and my_friends.friend_id=users.user_id; -->
@@ -19,16 +17,22 @@
         table,td,th{
             border: 1px solid black;
             text-align:center;
+            padding:10px;
+        }
+        th{
+            background-color:lightblue;
+        }
+        td button{
+            background-color:deeppink;
+            color:white;
+            padding:5 30 5 30;
+        }
+        a{
+            margin-left:50px;
         }
     </style>
     </head>
-    <body>
-        <!-- <?php echo "<h1>EMAIL : ".$_SESSION["email"]."</h1>"?>
-        <?php if(isset($_SESSION["f_name"])) echo "<h1>NAME: ".$_SESSION["f_name"]."</h1>"?>
-        <?php if(isset($_SESSION["user_id"])) echo "<h1>ID: ".$_SESSION["user_id"]."</h1>"?> -->
-        <?php
-        print_r($_SESSION);
-        ?>
+    <body style="text-align:center;">
         
 
         <h1>MY Social Circle</h1>
@@ -42,12 +46,11 @@
               }
             $con->close();
         ?>
-        <table >
+        <table style="margin-left:auto;margin-right:auto;">
             <tr>
                 <th>No.</th>
                 <th>Friends</th>
                 <th>Click To unfriend</th>
-                
             </tr>
             
             <?php
@@ -62,7 +65,7 @@
                     echo "<tr>";
                     echo "<td>".$i."</td>";
                     echo "<td>".$row['profile_name']."</td>";
-                    echo "<td><button onclick='button_clk(".$row['user_id'].");'>Unfriend</button></td>";
+                    echo "<td><button  onclick='button_clk(".$row['user_id'].");'>Unfriend</button></td>";
                     echo "</tr>";
                     $i=$i+1;
                   }
@@ -71,6 +74,7 @@
             ?>
             
         </table>
+        <br>
         <a href="logout.php">Logout</a>
         <a href="friendadd.php">friendadd</a>
         <form action="" method="POST">

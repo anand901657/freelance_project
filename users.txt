@@ -1,0 +1,10 @@
+1011,john@mail.com,Testing123,john,2
+2011,Aida@mail.com,Newpass,aida,5
+3011,Nelson@mail.com,passforNelson,Nelson,1
+4011,Collins@mail.com,passforCollins,Collins,3
+5011,Morris@mail.com,passforMorris,Morris,1
+6011,Dawson@mail.com,passforDawson,Dawson,1
+7011,Trent@mail.com,passforTrent,Trent,1
+8011,Horn@mail.com,passforHorn,Horn,1
+9011,Livingston@mail.com,passforLivingston,Livingston,3
+1012,Allison@mail.com,passforAllison,Allison,2
